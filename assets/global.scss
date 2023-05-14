@@ -3,3 +3,29 @@
     margin: 0;
     padding: 0;
 }
+:root {
+    --bg-theme:white;
+    --text-theme:black;
+}
+.dark {
+    --bg-theme:black;
+    --text-theme:white;
+}
+html {
+    background-color: var(--bg-theme);
+    color: var(--text-theme);
+    a {
+        background-color: inherit;
+        color: inherit;
+    }
+}
+
+body {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-image: url(~/assets/images/hero-gradient.svg);
+}
+
+
+

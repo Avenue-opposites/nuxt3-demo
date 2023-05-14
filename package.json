@@ -6,15 +6,30 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.38.6",
+    "@iconify-json/mdi": "^1.1.51",
     "@types/node": "^18",
     "@unocss/eslint-config": "^0.51.12",
     "@unocss/nuxt": "^0.51.12",
     "eslint": "^8.40.0",
+    "lint-staged": "^13.2.2",
     "nuxt": "^3.4.3",
     "sass": "^1.62.1",
-    "sass-loader": "^13.2.2"
+    "sass-loader": "^13.2.2",
+    "simple-git-hooks": "^2.8.1"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.1.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
