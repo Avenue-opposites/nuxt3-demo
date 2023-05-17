@@ -10,6 +10,7 @@
 .dark {
     --bg-theme:black;
     --text-theme:white;
+    color-scheme: dark;
 }
 html {
     background-color: var(--bg-theme);
@@ -25,6 +26,10 @@ body {
     background-repeat: no-repeat;
     background-position: 100% 0%;
     background-image: url(~/assets/images/hero-gradient.svg);
+}
+
+a {
+    transition: color 0.2s ease-in-out;
 }
 
 
